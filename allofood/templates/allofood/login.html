@@ -1,0 +1,20 @@
+{% load staticfiles crispy_forms_tags %}
+
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+
+    <div class="titre-login">Se connecter</div>
+    <div>
+        {{ const.form|crispy }}
+    </div>
+    <div>
+        {% for message in messages %}
+            {% if 'user_not_found' in message.tags %}
+                <p style="color:red;font-size: 17px" align="center">email/password are incorrect</p>
+            {% elif 'email_not_confirmed' in message.tags %}
+                <p style="color:red;font-size: 17px" align="center">Confirmez votre email SVP</p>
+            {% endif %}
+        {% endfor %}
+        <input type="submit" name="login" value="Se Connecter" id='loginbutton'>
+    </div>
+</form>

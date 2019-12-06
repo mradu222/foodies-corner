@@ -1,0 +1,80 @@
+{% extends 'allofood/base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <div class="container-fuiled page">
+        <div class="container-fuiled">
+            <div class="row">
+                <div class="col-md-12 acceuil">
+                    <img src="{% static 'allofood/images/' %}miniprojet.jpg">
+                </div>
+                <div class="col-md-12 meilleur">
+                    <div class="titre-meill"><h2 class="text-center  wow fadeInUp">Les Meilleurs Restaurents</h2></div>
+                    <div class="container-fuiled">
+                        <div class="row">
+                            {% for restaurant in best_restaurants %}
+                                <div class="col-md-4 wow fadeInUp" data-wow-delay="1s">
+                                    <img class="image-meill"
+                                         src="{% static 'allofood/images/' %}{{ restaurant.image }}">
+                                    <h5>{{ restaurant.name }}</h5>
+                                    <a href="{% if restaurant.link %}  {% url 'restaurant' restaurant.link %}   {% endif %}"
+                                       class="Commander-meill">Commander</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="div-bouton-meill wow fadeInUp" data-wow-delay="1.5s">
+                        <a href="{% url 'restaurants' %}" class="bouton-meill">Voir tous les restaurents</a></div>
+                </div>
+                <!--Start Services-->
+                <div class="col-md-12">
+                    <div class="col-md-12 services"><h2 class="text-center wow fadeInUp" data-wow-delay="2s">
+                        SERVICES</h2>
+                    </div>
+                    <div class="container-fluid lead">
+                        <div class="row">
+                            <div class="col-md-4 wow fadeInLeft" data-wow-delay="2.9s">
+                                <div class="service commande">
+                                    <div class="service-icon center-block">
+                                        <img src="{% static 'allofood/images/' %}commander.png">
+                                    </div>
+                                    <h3 class="text-center">Commande</h3>
+                                    <p align="center" class="text-center"> Choisissez votre restaurant,<br> Choisissez
+                                        vos d&eacute;licieux
+                                        repas pr&eacute;f&eacute;r&eacute;s.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 wow fadeInLeft" data-wow-delay="2.7s">
+                                <div class="service confirmation">
+                                    <div class="service-icon center-block">
+                                        <img src="{% static 'allofood/images/' %}confirmation.png">
+                                    </div>
+                                    <h3 class="text-center">Confirmation</h3>
+                                    <p class="text-center">Remplissez le formulaire, <br> Confirmer votre commande.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 wow fadeInLeft" data-wow-delay="2.5s">
+                                <div class="service livraison">
+                                    <div class="service-icon center-block">
+                                        <img src="{% static 'allofood/images/' %}coursier.png">
+                                    </div>
+                                    <h3 class="text-center">Livraison</h3>
+                                    <p class="text-center">Patientez le temps que l&#146;un de nos coursiers sonne
+                                        &agrave;
+                                        votre porte, et payez lorsque vous aurez votre repas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'allofood/css/' %}bootstrap-4/js/wow.min.js"></script>
+{#    <script src="{% static 'allofood/css/' %}wow.min.js"></script>#}
+    <script>
+              new WOW().init();
+
+    </script>
+{% endblock %}

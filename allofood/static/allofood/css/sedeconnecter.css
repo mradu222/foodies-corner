@@ -1,0 +1,176 @@
+.logo1
+{
+  float:left;
+    margin-top:10px;
+  margin-left:40px;
+}
+.logo1 h3 a
+{
+  text-decoration:none;
+  color:red;
+}
+.logo1 h3 a:hover
+{
+  text-decoration:none;
+}
+
+nav
+{
+  background-color:#F2F2F2;
+  position:fixed;
+  list-style: none;
+  width:100%;
+  height:50px;
+  z-index:9;
+  border-bottom:4px solid red;
+}
+nav li
+{
+  margin-left:40px;
+  margin-top:15px;
+  display: inline-block;
+}
+.menu1
+{
+  float:right;
+  margin-right:40px;
+   margin-top:-5px;
+}
+.menu1 li a
+{
+  color:black;
+  text-decoration:none;
+  font-size:80%;
+  font-weight:bold;
+
+}
+.menu1 li a:hover
+{
+  color:tomato;
+
+}
+.badge-panier1 {
+     background-color: tomato;
+     border-radius: 10px;
+     color: white;
+     display: inline-block;
+     font-size: 12px;
+     line-height: 1;
+     padding: 3px 7px;
+     text-align: center;
+     vertical-align: top;
+     white-space: nowrap;
+     margin-left:11px;
+ }
+ @media only screen and (max-width: 700px){
+
+.logo1
+{
+	 margin-left:10px;
+}
+.acc
+{
+  display:none;
+}
+nav li
+{
+  margin-left:30px;
+  
+}
+
+
+ }
+.sedeconnecter:hover
+{
+	background-color:#FE9A2E;
+}
+.connecter form label
+{
+	 font-size:15px;
+}
+.flech
+{
+	width: 0;
+	height:0;
+	position:absolute;
+	right:155px;
+	top:30px;
+	display:none;	
+}
+.connecter
+{
+	position:absolute;
+	width:280px;
+	height:170px;
+	background-color:#F2F2F2;
+	right:30px;
+	top:50px;
+	border-radius:2px;
+	display:none;
+
+}
+.connecter h3
+{
+	
+font-weight:bold;
+font-size:18px;	
+
+}
+
+
+.connecter form
+{
+
+	width:140px;
+	margin:15px auto;
+	font-size:16px;
+	font-family:sans-serif,arial;
+	letter-spacing: -0.05em;
+}
+.disconection  
+{
+
+}
+.disconection  p
+{
+
+
+}
+.fa-arrow-right
+{
+    
+
+}
+.fa-cog{
+
+}
+.img-profil
+{
+
+    
+}	
+.img-profil img
+{
+
+}
+.avatar{
+
+
+ 
+}
+.sedeconnecter
+{
+	width: 98%;
+	height: 40px;
+	
+	font-size:20px;
+	font-weight:bold;
+	font-family:sans-serif,arial;
+	color:white;
+	outline: none;
+	border:0px;
+	border-radius:3px;
+	margin-top:15px;
+	letter-spacing:-0.05em;
+}
+	

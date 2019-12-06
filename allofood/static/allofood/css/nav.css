@@ -1,0 +1,81 @@
+.logo
+{
+  float:left;
+    margin-top:10px;
+  margin-left:40px;
+}
+.logo h3 a
+{
+  text-decoration:none;
+  color:red;
+}
+.logo h3 a:hover
+{
+  text-decoration:none;
+}
+
+nav
+{
+  background-color:#F2F2F2;
+  position:fixed;
+  list-style: none;
+  width:100%;
+  height:50px;
+  z-index:9;
+  border-bottom:4px solid red;
+}
+nav li
+{
+  margin-left:40px;
+  margin-top:15px;
+  display: inline-block;
+}
+.menu
+{
+  float:right;
+  margin-right:40px;
+   margin-top:-5px;
+}
+.menu li a
+{
+  color:black;
+  text-decoration:none;
+  font-size:80%;
+  font-weight:bold;
+
+}
+.menu li a:hover
+{
+  color:tomato;
+
+}
+.badge-panier {
+     background-color: tomato;
+     border-radius: 10px;
+     color: white;
+     display: inline-block;
+     font-size: 12px;
+     line-height: 1;
+     padding: 3px 7px;
+     text-align: center;
+     vertical-align: top;
+     white-space: nowrap;
+     margin-left:11px;
+ }
+ @media only screen and (max-width: 700px){
+
+.logo
+{
+	 margin-left:10px;
+}
+.acc
+{
+  display:none;
+}
+nav li
+{
+  margin-left:10px;
+}
+
+
+ }

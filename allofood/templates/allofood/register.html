@@ -1,0 +1,31 @@
+{% extends 'allofood/base.html' %}
+{% load staticfiles crispy_forms_tags  %}
+
+{% block extra_dependencies %}
+<link rel="stylesheet" type="text/css" href="{% static 'allofood/css/' %}css_ajouter.css">
+{% endblock %}
+
+{% block body %}
+{% block nav %}{% endblock %}
+
+  <div class="container backgr">
+      <br>
+      <a href="{% url 'index' %}" style="text-decoration:none;">
+      <h3 align=center style="text-decoration:none;border:none;border-radius:10px;background-color:#F9F9F9;color:black;padding:7px 30px;">
+          Déjà membre? vous pouvez vous connecter à partir d'ici
+      </h3>
+      </a>
+    <form id="contact" method="post">
+                    {% csrf_token %}
+      <h3 align=center>Creer un compte</h3>
+      <h4 align=center>Inscrivez-vous gratuitement, et fait vous livrer tous vos plat préférés à domicile</h4>
+  	<fieldset>
+                        {{ form|crispy }}
+      </fieldset>
+
+  	<!-- <button type="submit" name="singin" id="contact-submit">Cree Un Compte</button> -->
+       <input  name="singin" type="submit" value="Creer Un Compte"  id="contact-submit">
+  	 </form>
+  </div>
+{% block footer %}{% endblock %}
+{% endblock %}

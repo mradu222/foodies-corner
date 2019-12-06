@@ -1,0 +1,174 @@
+*
+{
+    margin:0;
+    padding:0; 
+
+}
+body
+{
+	font-family:tahoma;
+}
+
+ .acceuil
+{
+	width:100%;
+	text-decoration: none;
+	height:100%;
+	background-position: center;
+	background-size:cover;
+}
+.acceuil img
+{
+   width:100%;
+   height:100%;
+}
+.affichage-acceuil
+{
+    position: absolute;
+	margin-left:4%;
+	margin-top:24%;
+	
+}
+.affichage-acceuil h1
+{
+	color:white;
+
+}
+.form-acceuil
+{
+
+	font-size:100%;
+
+}
+.button-acceuil
+{
+	border:1px solid tomato;
+	padding:11px 40px;
+	color:white;
+	text-decoration: none;
+	border-radius:12px;
+	background-color:tomato;
+	margin-left:40px;
+}
+
+.localisation
+{
+	padding:15px 70px;
+	border-radius:12px;
+	border:1px solid tomato;
+	background-image:url(img/loca.jpg);
+	background-position: left;
+    background-size:18%;
+    background-repeat:no-repeat;
+    font-size:80%;
+
+}
+
+.titre-meill h2
+{
+	
+    margin-top:5%;
+	
+}
+h5
+{
+	color:gray;
+	margin-left:20px;
+	margin-top: 20px;
+}
+.titre-meill h2:after
+{
+	position:center;
+	width:245px;
+	height: 2px;
+	background-color:tomato;
+	display:block;
+	content: "";
+	margin:0 auto;
+	margin-top:10px;
+}
+.image-meill
+{
+	
+	position:center;
+	width:100%;
+	height:270px;
+	top:50%;
+	left:40%;
+	margin-top:10px;
+	border:1px solid gray;
+	
+}
+.Commander-meill
+{
+	border:2px solid tomato;
+	margin-left:78%;
+    margin-top:55px;
+	padding:8px 3px;
+	color:tomato;
+	
+
+}
+.Commander-meill:hover
+{
+	background-color:tomato;
+	color:white;
+    text-decoration:none;
+
+}
+.div-bouton-meill
+{
+	width:100%;
+	margin-top:40px;
+	font-size:100%;
+
+}
+
+.bouton-meill
+{
+	border:1px solid #FDBFB7;
+	padding:15px 6%;
+	color:white;
+	text-decoration: none;
+	background-color:#FDBFB7;
+	margin-left:40%;
+
+		
+}
+.bouton-meill:hover
+{
+	background-color:#FF6F7D;
+	color: white;
+	text-decoration:none;
+
+}
+footer{
+   padding:30px;
+   width:100%;
+   color:white;
+   background-color:black;
+   position:absolute;
+ 
+   }
+footer .social{
+font-size:20px;
+height:30px;
+width:30px;
+text-align:center;
+padding:5px;
+border:1px solid #cccccc;
+margin-bottom:10px;
+margin-right:5px;
+}
+footer input{
+height:40px;
+width:160px;
+padding:5px;
+border:none;
+background-color:#cccccc;
+color:#000;
+}
+footer .btn{
+padding: 10px 5px 10px;
+margin: -3px 0 0 5px;
+}

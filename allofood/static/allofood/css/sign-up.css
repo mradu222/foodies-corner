@@ -1,0 +1,69 @@
+.arriere-plan
+{
+   height:700px;
+	width:100%;
+	background-color:rgba(0,0,0,0.7);
+	display:none;
+}
+.sign-up 
+{
+	margin-left:20%;
+	margin-top:8%;
+	width:58%;
+	position:absolute;
+	background-color:rgba(0,0,0,0.7);
+	padding:20px;
+	display:none;
+
+}
+.titre-sign-up h2
+{
+	color:tomato;
+	margin-top:15px;
+	margin-left:10px;
+}
+.des-sign-up 
+{
+    color:white;
+    margin-left:10px;
+    margin-bottom:20px;
+}
+.sign-up input[type="text"],
+.sign-up input[type="password"]
+{
+	width:100%;
+	height:40px;
+	margin-top:5%; 
+	margin-right:20px; 
+	margin-left:5px; 
+}
+.sign-up input[type="submit"]
+{
+	width: 100%;
+	height: 10%;
+	background:tomato; 
+	font-size:20px;
+	font-weight:bold;
+	font-family:sans-serif,arial;
+	color:white;
+	outline: none;
+	border:0px;
+	border-radius:3px;
+	margin-top:5%;
+	margin-left:5px; 
+	letter-spacing:-0.05em;
+}
+.close
+{
+	border:3px solid white;
+	border-radius:25px;
+	background-color:white;
+	float:right;
+}
+.close button
+{
+	border:3px solid white;
+	border-radius:25px;
+	background-color:white;
+	float:right;
+}

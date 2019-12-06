@@ -1,0 +1,106 @@
+{% load staticfiles %}
+<nav>
+    <div class="logo">
+        <h3><a href="{% url 'index' %}">ALLO FOOD</a></h3>
+    </div>
+    <ul class="menu">
+        <li><a class="acc" href="{% url 'index' %}">ACCUEIL</a></li>
+        <li><a href="{% url 'restaurants' %}">RESTAURANTS</a></li>
+
+        {% if request.session.user %}
+            <li><a href="" id="login">
+                <div class="img-profil"
+                     style="position:absolute;width:30px;height:30px;border:1px solid transparent;border-radius:50%;margin-top:-18px;  margin-left:-18px;">
+                    <img src="{% static 'allofood/images/' %}avatar.png" style="border-radius:50%;
+  width:100%;
+  height:100%;"></div>
+            </a></li>
+            <div class="connecter" style="position:absolute;
+  width:280px;
+  height:150px;
+  background-color:#F2F2F2;
+  right:30px;
+  top:50px;
+  border-radius:2px;
+  display:none;">
+                <form method="post" style="width:140px;
+  margin:15px auto;
+  font-size:16px;
+  font-family:sans-serif,arial;
+  letter-spacing: -0.05em;">
+                    <div>
+                        <h3 style="font-weight:bold;
+font-size:18px; ">{{ request.session.user.first_name }} </h3>
+                        <p>{{ request.session.user.email }}</p>
+                        <img src="{% static 'allofood/images/' %}avatar.png" class="avatar" style="border-radius:50%;
+ width:40px;
+ height:40px;
+ margin-top:-45%;
+ margin-left:-40%;
+">
+                    </div>
+
+                    <div class="disconection">
+
+{#                        <i class="fa fa-cog" style="width:35px;#}
+{#  height:25px;#}
+{#  margin-left:-30%;"></i> <a href="profile.php"><p style="margin-top:-20%;"> Parametres </p></a>#}
+                        <i class="fa fa-arrow-right" style="width:35px;
+  height:25px;
+  margin-left:-30%;"></i>
+                        <a name="logout" href="{% url 'logout' %}"
+                           style="margin-top:-20%; border:none; background-color:#F2F2F2;color:#0174DF;cursor:pointer;">
+                            Se deconnecter</a>
+                    </div>
+                </form>
+
+            </div>
+        {% else %}
+            <li><a href="#" id="login">SE CONNECTER</a></li>
+            <div class="flech" style=""></div>
+            <div class="connecter"
+                    {% for message in messages %}
+                        {% if 'already_registered' in message.tags %}
+                 style="display:block;"
+                        {% else %}
+                 style="display:block; height:410px;"
+                        {% endif %}
+                    {% endfor %}>
+                {% include 'allofood/login.html' %}
+                <div class="btn-iscrire">
+                    <a href="{% url 'register' %}">
+                        <button>s'inscrire</button>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
+        <li>
+                <span class="panier" id="cd-cart-trigger"><a class="cd-img-replace" href="#0">
+                   <img src="{% static 'allofood/images/' %}shopping-cart.svg" width="34" style="margin-right: -27px;">
+
+                    {% if request.session.user %}
+                        <span class="badge-panier" style="background-color: tomato;
+     border-radius: 10px;
+     color: white;
+     display: inline-block;
+     font-size: 12px;
+     line-height: 1;
+     padding: 3px 7px;
+     text-align: center;
+     vertical-align: top;
+     white-space: nowrap;
+     margin-left:11px;">
+                    {% else %}
+                        <span class="badge-panier">
+                    {% endif %}
+
+                    {% if request.session.cart %}
+                        {{ request.session.cart.num_products }}
+                    {% else %}0
+                    {% endif %}
+                    </span>
+                   </a>
+                </span>
+        </li>
+    </ul>
+</nav>

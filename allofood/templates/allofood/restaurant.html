@@ -1,0 +1,168 @@
+{% extends 'allofood/base.html' %}
+{% load staticfiles extra_filters %}
+
+{% block body %}
+    <div class="container-fluid page">
+        <div class="row">
+            <div class=" col-md-4 information">
+                <div class="col-md-12"><img src="{% static 'allofood/images/' %}{{ types|get_restaurant:'image' }}">
+                </div>
+                <div class="col-md-12 adresse">
+                    <div class="titre-info">Adresse</div>
+                    <div class="contenue">{{ types|get_restaurant:'address' }}</div>
+                </div>
+                <div class="col-md-12 frais-livraison">
+                    <div class="titre-info">Frais et delais <br>de livraison</div>
+                    <div class="contenue">
+                        <div>A partir de 150 DA</div>
+                        <div>delais : 30min</div>
+                    </div>
+                </div>
+                <div class="col-md-12 mode-paiement">
+                    <div class="titre-info">Mode de <br>Paiement</div>
+                    <div class="contenue">Paiement a la livraison</div>
+                </div>
+            </div>
+            <div id="myCarousel" class=" col-md-8 carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner">
+                    {% for slide in types|get_restaurant:'sliders'|sliders_list %}
+                        <div class="{% cycle "carousel-item active" "carousel-item" "carousel-item" "carousel-item" "carousel-item" "carousel-item" %}">
+                            <img class="{% cycle "first-slide" "second-slide" "third-slide" "fourth-slide" "fifth-slide" "sixth-slide" %}"
+                                 src="{% static 'allofood/images/' %}{{ slide }}"
+                                 alt="{% cycle "first slide" "second slide" "third slide" "fourth slide" "fifth slide" "sixth slide" %}">
+                            <div class="container">
+                                <div class="carousel-caption text-left">
+                                    <h1></h1>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role=" button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="col-md-12 menu2n text-center">
+                <h1>MENU</h1>
+                {% for t in types %}
+                    <div>
+
+                        <h2>{{ t.first.type }}</h2>
+                        <div class="container-fluid">
+                            <div class="row">
+                                {% for p in t %}
+                                    <div class="col-md-4">
+                                        <form method="post" action="{% url 'cart' %}" class="product_form"
+                                              data-url="{% url 'cart' %}">
+                                            {% csrf_token %}
+                                            <legend class="prix2n">{{ p.price }} DA</legend>
+                                            <img class="image-menu" src="{% static 'allofood/images/' %}/{{ p.image }}">
+                                            <legend class="legend2n">
+                                                <h4>{{ p.name }}</h4>
+                                                <p>{{ p.ingredients }}</p>
+                                            </legend>
+                                            <input class="button-add" type="submit" value="+">
+                                        </form>
+                                        {#                                        <button class="button-add" data-url="{% url 'cart' %}">#}
+                                        {#                                            <span class="content">+</span>#}
+                                        {#                                        </button>#}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-12 avis">
+
+                {% if request.session.user %}
+
+                    <form id="comment_form" class="form" method="POST" data-url="{% url 'comment' %}"
+                          action="{% url 'comment' %}">
+
+                        {% csrf_token %}
+
+                        <div class="row">
+                            <div class="col-md-1" style="width:100%;"><img
+                                    style="width:100%;margin-top:25px;border-radius:50%;"
+                                    src="{% static 'allofood/images/' %}avatar.png">
+                            </div>
+                            <div class="col-md-11">
+                                <div class="col-md-12 titre-avis">
+                                    <p class="" name="username"
+                                       style="margin-bottom: -13px;">{{ request.session.user.first_name }}</p>
+                                    <div class="rating" style="margin-top:18px;">
+                                        <span class="fa fa-star  star" id="star_1" style="color:tomato;"></span>
+                                        <span class="fa fa-star-o  star" id="star_2" style="color:tomato;"></span>
+                                        <span class="fa fa-star-o  star" id="star_3" style="color:tomato;"></span>
+                                        <span class="fa fa-star-o  star" id="star_4" style="color:tomato;"></span>
+                                        <span class="fa fa-star-o  star" id="star_5" style="color:tomato;"></span>
+                                        <input id="stars" name="stars" type="text" value="0" style="display:none">
+                                        <input id="restaurant" name="restaurant" type="text"
+                                               value="{{ types|get_restaurant:'id' }}" style="display:none">
+                                    </div>
+                                </div>
+                            </div>
+                            {#                    <form class="form">#}
+
+                            <div class="col-md-10">
+                            <textarea class="ecrire-avis"
+                                      style="margin-bottom:4px;background-color:transparent;border: none;border-bottom: 1px solid tomato;height:100%;width:100%;margin-left:11%;"
+                                      name="text" id="text" placeholder=" donner votre avis"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <input class="giving" type="submit" name="savecomment" value="Soumettre"
+                                       id="sendcomment"
+                                       style="margin-left: 60%;background-color:#fff;border: 1px solid tomato;color: tomato;cursor: pointer;padding: 8px 15px;">
+                            </div>
+                        </div>
+                    </form>
+
+                {% endif %}
+                {% for comment in comments %}
+                    <div class="">
+                        <div class="col-md-12 row">
+                            <div class="col-md-1" style="width:100%;"><img
+                                    style="width:100%;margin-top:25px;border-radius:50%;"
+                                    src="{% static 'allofood/images/' %}/avatar.png">
+                            </div>
+                            <div class="col-md-11">
+                                <div class="col-md-12 titre-avis">
+                                    <p class="" name="username" style="">{{ comment|get_username }}</p>
+                                    <div class="rating" style="margin-top:-18px;">
+                                        {% for r in comment.rating|iterate|make_list %}
+                                            <span class="fa fa-star " id="star_1_1" style="color:tomato;"></span>
+                                        {% endfor %}
+                                        {% for r in comment.rating|revrse_iterate|make_list %}
+                                            <span class="fa fa-star-o star" id="star_5_1" style="color:tomato;"></span>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12" style="background-color:beige;">
+                                    <p style="height:10%;width:100%;margin-top:15px;"
+                                       name="comment">{{ comment.text|linebreaks }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="{% static 'allofood/js/' %}rating.js"></script>
+
+
+
+
+{% endblock %}

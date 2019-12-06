@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+
+<link rel="stylesheet" href="{% static 'allofood/css/' %}css_confirmation.css">
+<body>
+<div id="contact">
+    <h3>ALLO FOOD</h3>
+    {% for message in messages %}
+        {% if 'email_sent' in message.tags %}
+            <h4> nous vous avons envoyé un e-mail pour valider votre compte! </h4>
+        {% elif 'email_confirmed' in  message.tags %}
+            <h4> Votre mail a été vérifié! Vous pouvez vous connecter maintenant! </h4>
+        {% elif 'ordered' in  message.tags %}
+            <h1 align="center">Commande terminer</h1>
+            <h4>votre commande a bien etais envoyé vous aller etre livrer dans quelque minute</h4>
+	        <img style=" display:inline;margin-left:110px;margin-right:110px;" src="{% static 'allofood/images/' %}livreurPizza.bmp">
+        {% endif %}
+    {% endfor %}
+</div>
+<script>
+    function redirect(){
+       window.location.href = "/";
+    }
+
+    setTimeout(redirect, 5000);
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+{% extends 'allofood/base.html' %}
+{% load staticfiles extra_filters %}
+
+{% block title %} Commandes {% endblock %}
+{% block dependencies %}
+    <link rel="stylesheet" type="text/css" href="{% static 'allofood/css/' %}command.css">
+{% endblock %}
+
+{% block nav %}{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div id="contact">
+            <header class="clearfix">
+                <h1 style="">COMMANDE</h1>
+
+                <form action="{% url 'orders' %}" method="post">
+                    {% csrf_token %}
+                    <div style="width:100%; "><p style="font-size:15px;color:gray; margin-left:35%;">Afficher juste les
+                        commandes non payés
+                        <input type="checkbox" name="nonPayed"/></p>
+                        <p style=" font-size:15px;color:gray; margin-left:35%;">Afficher juste les commandes
+                            d'aujoud'hui
+                            <input type="checkbox" name="today"/></p></div>
+                    <input style="margin-left:45%; border:none;background-color:tomato;color:white;padding:10px 25px;border-radius:5%;cursor:pointer;"
+                           type="submit" name="consts" value="Actualiser"/>
+                </form>
+            </header>
+            <main>
+                <table>
+                    <thead>
+                    <tr>
+                        <th style="padding: 5px 10px;">Nom</th>
+                        <th style="padding: 5px 35px;">adresse</th>
+                        <th style="padding: 5px 1px;">Numero de telephone</th>
+                        <th width="30%" style="padding: 5px 50px;">commande</th>
+                        <th width="10%" style="padding: 5px 1px;">totale</th>
+                        <th style="padding: 5px 1px;">payement</th>
+                    </tr>
+                    </thead>
+                    {% for order in orders %}
+                        <tr>
+                            <td class="staticTd1">{{ order.name }}</td>
+                            <td class="staticTd1">{{ order.address }}</td>
+                            <td class="staticTd1">{{ order.telephone }}</td>
+                            <td style="padding: 5px 50px;">
+                                {% autoescape off %}{{ order.products }}{% endautoescape %}</td>
+                            <td class="staticTd1">{{ order.total }} DA</td>
+                            <td class="staticTd1">
+                                {% if not order.payement %}
+                                    <form action="{% url 'orders' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="text" name="orderDate" value="{{ order.date }}" style="display:none">
+                                        <input type="submit" name="markPayed" value="marquer comme payé" style=" border:none;background-color:tomato;color:white;padding:10px 25px;border-radius:5%;cursor:pointer;width:100%;">
+                                    </form>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    {#                    <tr>#}
+                    {#                        <td class="staticTd1">sidou benmansour</td>#}
+                    {#                        <td class="staticTd1"> 19 rue hola1</td>#}
+                    {#                        <td class="staticTd1"> 29993991</td>#}
+                    {#                        <td style="padding: 5px 50px;">1 x Le 93 -- (Quality Tacos)<br> 1 x Tandoori -- (Quality#}
+                    {#                            Tacos)<br>#}
+                    {#                            1 x Mexicano -- (Quality Tacos)<br></td>#}
+                    {#                        <td class="staticTd1">1600 DA</td>#}
+                    {#                        <td class="staticTd1">#}
+                    {#                            <form method="post"><input type="text" name="ordertime" value="82325"#}
+                    {#                                                       style="display:none"><input type="submit" name="markpayed"#}
+                    {#                                                                                   value="marquer comme payé"#}
+                    {#                                                                                   style=" border:none;background-color:tomato;color:white;padding:10px 25px;border-radius:5%;cursor:pointer;width:100%;">#}
+                    {#                            </form>#}
+                    {#                        </td>#}
+                    {#                    </tr>#}
+                </table>
+            </main>
+        </div>
+    </div>
+
+{% endblock %}
+{% block mainScript %} {% endblock %}
+{% block cart %}{% endblock %}
+{% block footer %}{% endblock %}
+
+</html>

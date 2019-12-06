@@ -1,0 +1,104 @@
+.connecter input[type="submit"]:hover,
+.btn-iscrire button:hover
+{
+	background-color:#FE9A2E;
+}
+.btn-iscrire button
+{
+	width: 82%;
+	height: 35px;
+	background:tomato; 
+	border:0px;
+	font-weight:bold;
+	font-family:sans-serif,arial;
+	border-radius:3px;
+	color:white;
+	font-size:20px;
+	margin-left:25px;
+	letter-spacing:-0.05em;
+}
+.connecter form label
+{
+	 font-size:15px;
+}
+.flech
+{
+	width: 0;
+	height:0;
+	position:absolute;;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom:20px solid tomato;
+	right:155px;
+	top:30px;
+	display:none;	
+}
+.connecter
+{
+	position:absolute;
+	width:300px;
+	height:370px;
+	background-color:#F2F2F2;
+	right:20px;
+	top:50px;
+	border-radius:2px;
+	display:none;
+
+}
+.connecter form
+{
+	width:250px;
+	margin:15px auto;
+	font-size:19px;
+	font-family:sans-serif,arial;
+	color:gray;
+	letter-spacing: -0.05em;
+	
+}
+
+.connecter input[type="email"],
+.connecter input[type="password"]
+{
+     width:245px;
+     height: 35px;
+     border:0px;
+     outline: none;
+     box-shadow: inset 0 0 10px gray;
+     border-radius:5px;
+     font-size:19px;
+	font-family:sans-serif,arial;
+
+}
+
+.connecter input[type="submit"]
+{
+	width: 98%;
+	height: 35px;
+	background:tomato; 
+	font-size:20px;
+	font-weight:bold;
+	font-family:sans-serif,arial;
+	color:white;
+	outline: none;
+	border:0px;
+	border-radius:3px;
+	margin-top:15px;
+	letter-spacing:-0.05em;
+}
+.titre-login
+{
+	margin-left:55px;
+	font-size:25px;
+	color:#6394F8;
+	margin-bottom:10px;
+}
+.oublier 
+{
+  margin-top:10px;
+  margin-left:50px;
+}
+.oublier a
+{
+   font-size:15px;
+   color:#6394F8;
+}

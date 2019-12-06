@@ -1,0 +1,47 @@
+{% extends 'allofood/base.html' %}
+{% load staticfiles extra_filters %}
+
+{% block extra_dependencies %}
+    <link rel="stylesheet" type="text/css" href="{% static 'allofood/css/' %}resto.css">
+{% endblock %}
+
+{% block body %}
+<div class="container-fuiled page">
+    <div class="row">
+        <div class="tab back-image-rest">
+
+            <table class="table">
+                {% for restaurant in restaurants %}
+                    <tr>
+                        <td>
+                            <div class="image-rest">
+                                <a href= {% if restaurant.link %}  {% url 'restaurant' restaurant.link %}   {% endif %}>
+                                    <img alt="image" src="{% static 'allofood/images/' %}{{ restaurant.image }}"/></a>
+                                <div class="cate">
+                                    <img alt="image" src="{% static 'allofood/images/' %}{{ restaurant.type_icon }}"/>
+                                    <h4>{{ restaurant.type }}</h4>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="entry-header"><h2 class="entry-title"><a href="quality"
+                                                                                 rel="bookmark">{{ restaurant.name }}</a>
+                            </h2></div>
+                            <div class="rating">
+                                {% for r in restaurant|get_rating|iterate|make_list %}
+                                    <span class="fa fa-star " id="star_1_1" style="color:tomato;"></span>
+                                {% endfor %}
+                                {% for r in restaurant|get_rating|revrse_iterate|make_list %}
+                                    <span class="fa fa-star-o star" id="star_5_1" style="color:tomato;"></span>
+                                {% endfor %}
+                            </div>
+                            <div class="adresse">{{ restaurant.address }}</div>
+                            <div class="entry-summary">{{ restaurant.summary }}</div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
