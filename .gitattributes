@@ -1,3 +1,5 @@
 /allofood/static/allofood/css/* linguist-vendored
 /allofood/static/allofood/css/bootstrap-4/* linguist-vendored
 
+/allofood/static/allofood/js/jquery-3.2.1.slim.min.js linguist-vendored
+/allofood/static/allofood/js/jquery-3.2.1.min.js linguist-vendored
