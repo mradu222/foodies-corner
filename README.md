@@ -1,30 +1,56 @@
 # Allofood
 
-### A food ordering website built with Django
+A food ordering website built with Django that lets users order food from multiple restaurants and pay on delivery
 
-<br><br>
+****
 
-#### Requirements:
-- python 3
-- django 2
+### Usage:
 
-#### Usage:
+- `git clone https://github.com/Badredine-Kheddaoui/allofood`
 
+- `pip install -r requirements.txt`
 
-allofood> ```python manage.py runserver```
+- `python manage.py makemigrations`
 
+- `python manage.py migrate`
 
-#### Things you need to include on your `settings.py` file:
-- 'allofood.apps.AllofoodConfig' and 'crispy_forms' among your `INSTALLED_APPS`
-- CRISPY_TEMPLATE_PACK = 'bootstrap4'
+- `python manage.py runserver`
 
-- EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-- EMAIL_HOST = 'smtp.gmail.com'
+- go to 'http://127.0.0.1:8000/'
+
+****
+
+To be able to send registration confirmation and password recovery emails you need to provide your google account credentials  in the `settings.py` file:
 - EMAIL_HOST_USER  = 'your gmail address'
 - EMAIL_HOST_PASSWORD = 'your gmail password'
-- EMAIL_PORT = 587
-- EMAIL_USE_TLS = True
 
+****
+
+### Tech stack
+- Django on the server side
+- jQuery and Bootstrap for responsiveness
+- AJAX/Django communication to update parts of the page according to the database without refreshing the whole page
+
+****
+
+### Features
+- User registration, email confirmation and password recovery(using email)
+- Shopping cart saved with products from different restaurants inside a session
+- An admin panel to add, update and delete users, restaurants, products and managing orders.
+- The content(restaurants rating, reviews and products) is dynamic and changes according to the database
+- Since most HTML pages have similar sections(shopping cart, navbar, footer...), They all extend a base HTML page.
+- If the user is connected, the content of their cart will be saved in the database for later logins and won't be deleted until they checkout
+- If a user is not connected, The content of their cart will be saved in their browsing session and will be copied to the database if they create an account
+
+****
+
+### Security Measures
+- User passwords are hashed before saved in the database.
+- Protection against Cross Site Request Forgeries by sending the user a token that has to be returned when submitting the form.
+- Input fields are sanitized to prevent JavaScript injections.
+- Database queries are protected from SQL injection by using query parameterization.
+
+****
 
 
 
