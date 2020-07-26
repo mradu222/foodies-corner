@@ -10,10 +10,6 @@ A food ordering website built with Django that lets users order food from multip
 
 - `pip install -r requirements.txt`
 
-- `python manage.py makemigrations`
-
-- `python manage.py migrate`
-
 - `python manage.py runserver`
 
 - go to 'http://127.0.0.1:8000/'
@@ -39,7 +35,7 @@ To be able to send registration confirmation and password recovery emails you ne
 - An admin panel to add, update and delete users, restaurants, products and managing orders.
 - The content(restaurants rating, reviews and products) is dynamic and changes according to the database
 - Since most HTML pages have similar sections(shopping cart, navbar, footer...), They all extend a base HTML page.
-- If the user is connected, the content of their cart will be saved in the database for later logins and won't be deleted until they checkout
+- If the user is connected, the content of their cart will be saved in the database for later logins.
 - If a user is not connected, The content of their cart will be saved in their browsing session and will be copied to the database if they create an account
 
 ****
@@ -54,48 +50,48 @@ To be able to send registration confirmation and password recovery emails you ne
 
 ### Screenshots
 
-The home page:
+#### The home page:
 
 ![home-login](./screenshots/home-login.jpg)
 
 
 
-The restaurants page:
+#### The restaurants page:
 
 ![restaurants](./screenshots/restaurants.png)
 
 
 
-A restaurant page:
+#### A restaurant page:
 
 ![quality](./screenshots/quality.jpg)
 
 
 
-The shopping cart:
+#### The shopping cart:
 
 ![restaurants-cart](./screenshots/restaurants-cart.png)
 
 
 
-The registration page:
+#### The registration page:
 
 ![register](./screenshots/register.png)
 
 
 
-The checkout page:
+#### The checkout page:
 
 ![checkout-filled](./screenshots/checkout-filled.png)
 
 
 
-The admin panel:
+#### The admin panel:
 
 ![admin](./screenshots/admin.png)
 
 
 
-The orders page(only accessible to the admin):
+#### The orders page(only accessible to the admin):
 
 ![orders](./screenshots/orders.png)
