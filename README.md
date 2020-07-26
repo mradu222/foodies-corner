@@ -56,46 +56,46 @@ To be able to send registration confirmation and password recovery emails you ne
 
 The home page:
 
-![home-login](./images/home-login.jpg)
+![home-login](./screenshots/home-login.jpg)
 
 
 
 The restaurants page:
 
-![restaurants](./images/restaurants.png)
+![restaurants](./screenshots/restaurants.png)
 
 
 
 A restaurant page:
 
-![quality](./images/quality.jpg)
+![quality](./screenshots/quality.jpg)
 
 
 
 The shopping cart:
 
-![restaurants-cart](./images/restaurants-cart.png)
+![restaurants-cart](./screenshots/restaurants-cart.png)
 
 
 
 The registration page:
 
-![register](./images/register.png)
+![register](./screenshots/register.png)
 
 
 
 The checkout page:
 
-![checkout-filled](./images/checkout-filled.png)
+![checkout-filled](./screenshots/checkout-filled.png)
 
 
 
 The admin panel:
 
-![admin](./images/admin.png)
+![admin](./screenshots/admin.png)
 
 
 
 The orders page(only accessible to the admin):
 
-![orders](./images/orders.png)
+![orders](./screenshots/orders.png)
