@@ -52,5 +52,50 @@ To be able to send registration confirmation and password recovery emails you ne
 
 ****
 
+### Screenshots
+
+The home page:
+
+![home-login](./images/home-login.jpg)
 
 
+
+The restaurants page:
+
+![restaurants](./images/restaurants.png)
+
+
+
+A restaurant page:
+
+![quality](./images/quality.jpg)
+
+
+
+The shopping cart:
+
+![restaurants-cart](./images/restaurants-cart.png)
+
+
+
+The registration page:
+
+![register](./images/register.png)
+
+
+
+The checkout page:
+
+![checkout-filled](./images/checkout-filled.png)
+
+
+
+The admin panel:
+
+![admin](./images/admin.png)
+
+
+
+The orders page(only accessible to the admin):
+
+![orders](./images/orders.png)
