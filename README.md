@@ -2,6 +2,8 @@
 
 A food ordering website built with Django that lets users order food from multiple restaurants and pay on delivery
 
+https://allofood-dz.herokuapp.com/
+
 ****
 
 ### Usage:
