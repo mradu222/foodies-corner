@@ -14,4 +14,53 @@ allofood/static/allofood/js/bootstrap.js linguist-vendored
 allofood/static/allofood/js/additional-methods.js linguist-vendored
 allofood/static/allofood/js/nav.js linguist-vendored
 
+
+allofood/static/allofood/js/sweetalert.js 
+
+allofood/static/allofood/js/nav.js 
+
+allofood/static/allofood/js/jquery-3.2.1.slim.min.js 
+
+allofood/static/allofood/js/jquery-3.1.1.min.js 
+
+allofood/static/allofood/js/jqeere.js 
+
+allofood/static/allofood/js/bootstrap2.min.js 
+
+allofood/static/allofood/js/bootstrap.min.js 
+
+allofood/static/allofood/js/bootstrap.js 
+
+allofood/static/allofood/js/additional-methods.js 
+
+allofood/static/allofood/css/bootstrap-4/js/carousel.js 
+
+allofood/static/allofood/js/cdn.js 
+
+allofood/static/allofood/css/bootstrap-4/js/bootstrap.min.js 
+
+allofood/static/allofood/css/bootstrap-4/js/bootstrap.js 
+
+allofood/static/allofood/css/bootstrap-4/js/bootstrap.bundle.min.js 
+
+allofood/static/allofood/css/bootstrap-4/js/bootstrap.bundle.js 
+
+allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/wow-spec.js 
+
+allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/libs/jquery.js 
+
+allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/libs/jasmine-jquery.js 
+
+allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/helpers/SpecHelper.js 
+
+allofood/static/allofood/css/bootstrap-4/js/wow.min.js 
+
+allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/dist/wow.min.js 
+
+allofood/static/allofood/css/bootstrap-4/js/wow.js 
+
+allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/dist/wow.js 
+
+allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/Gruntfile.js
+
 allofood/templates/* linguist-vendored
