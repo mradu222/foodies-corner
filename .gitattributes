@@ -1,66 +1,66 @@
-allofood/static/allofood/css/* linguist-vendored
-allofood/static/allofood/css/bootstrap-4/* linguist-vendored
-allofood/static/allofood/css/bootstrap-4/* linguist-vendored
+/allofood/static/allofood/css/* linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/* linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/* linguist-vendored
 
 
-allofood/static/allofood/js/jquery-3.2.1.slim.min.js linguist-vendored
-allofood/static/allofood/js/jquery-3.1.1.min.js linguist-vendored
-allofood/static/allofood/js/sweetalert.js linguist-vendored
-allofood/static/allofood/js/jqeere.js linguist-vendored
-allofood/static/allofood/js/cdn.js linguist-vendored
-allofood/static/allofood/js/bootstrap2.min.js linguist-vendored
-allofood/static/allofood/js/bootstrap.min.js linguist-vendored
-allofood/static/allofood/js/bootstrap.js linguist-vendored
-allofood/static/allofood/js/additional-methods.js linguist-vendored
-allofood/static/allofood/js/nav.js linguist-vendored
+/allofood/static/allofood/js/jquery-3.2.1.slim.min.js linguist-vendored
+/allofood/static/allofood/js/jquery-3.1.1.min.js linguist-vendored
+/allofood/static/allofood/js/sweetalert.js linguist-vendored
+/allofood/static/allofood/js/jqeere.js linguist-vendored
+/allofood/static/allofood/js/cdn.js linguist-vendored
+/allofood/static/allofood/js/bootstrap2.min.js linguist-vendored
+/allofood/static/allofood/js/bootstrap.min.js linguist-vendored
+/allofood/static/allofood/js/bootstrap.js linguist-vendored
+/allofood/static/allofood/js/additional-methods.js linguist-vendored
+/allofood/static/allofood/js/nav.js linguist-vendored
 
 
-allofood/static/allofood/js/sweetalert.js linguist-vendored
+/allofood/static/allofood/js/sweetalert.js linguist-vendored
 
-allofood/static/allofood/js/nav.js linguist-vendored
+/allofood/static/allofood/js/nav.js linguist-vendored
 
-allofood/static/allofood/js/jquery-3.2.1.slim.min.js linguist-vendored
+/allofood/static/allofood/js/jquery-3.2.1.slim.min.js linguist-vendored
 
-allofood/static/allofood/js/jquery-3.1.1.min.js linguist-vendored
+/allofood/static/allofood/js/jquery-3.1.1.min.js linguist-vendored
 
-allofood/static/allofood/js/jqeere.js linguist-vendored
+/allofood/static/allofood/js/jqeere.js linguist-vendored
 
-allofood/static/allofood/js/bootstrap2.min.js linguist-vendored
+/allofood/static/allofood/js/bootstrap2.min.js linguist-vendored
 
-allofood/static/allofood/js/bootstrap.min.js linguist-vendored
+/allofood/static/allofood/js/bootstrap.min.js linguist-vendored
 
-allofood/static/allofood/js/bootstrap.js linguist-vendored
+/allofood/static/allofood/js/bootstrap.js linguist-vendored
 
-allofood/static/allofood/js/additional-methods.js linguist-vendored
+/allofood/static/allofood/js/additional-methods.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/js/carousel.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/js/carousel.js linguist-vendored
 
-allofood/static/allofood/js/cdn.js linguist-vendored
+/allofood/static/allofood/js/cdn.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/js/bootstrap.min.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/js/bootstrap.min.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/js/bootstrap.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/js/bootstrap.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/js/bootstrap.bundle.min.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/js/bootstrap.bundle.min.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/js/bootstrap.bundle.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/js/bootstrap.bundle.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/wow-spec.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/wow-spec.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/libs/jquery.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/libs/jquery.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/libs/jasmine-jquery.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/libs/jasmine-jquery.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/helpers/SpecHelper.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/spec/javascripts/helpers/SpecHelper.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/js/wow.min.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/js/wow.min.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/dist/wow.min.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/dist/wow.min.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/js/wow.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/js/wow.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/dist/wow.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/dist/wow.js linguist-vendored
 
-allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/Gruntfile.js linguist-vendored
+/allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/Gruntfile.js linguist-vendored
 
-allofood/templates/* linguist-vendored
+/allofood/templates/* linguist-vendored
