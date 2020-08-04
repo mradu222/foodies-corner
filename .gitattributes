@@ -63,4 +63,5 @@
 
 /allofood/static/allofood/css/bootstrap-4/WOW-master/WOW-master/Gruntfile.js linguist-vendored
 
+/allofood/static/allofood/css/bootstrap-4/js/* linguist-vendored
 /allofood/templates/* linguist-vendored
