@@ -10,7 +10,7 @@
                     <img src="{% static 'allofood/images/' %}miniprojet.jpg">
                 </div>
                 <div class="col-md-12 meilleur">
-                    <div class="titre-meill"><h2 class="text-center  wow fadeInUp">Les Meilleurs Restaurents</h2></div>
+                    <div class="titre-meill"><h2 class="text-center  wow fadeInUp">Restaurants</h2></div>
                     <div class="container-fuiled">
                         <div class="row">
                             {% for restaurant in best_restaurants %}
@@ -19,13 +19,13 @@
                                          src="{% static 'allofood/images/' %}{{ restaurant.image }}">
                                     <h5>{{ restaurant.name }}</h5>
                                     <a href="{% if restaurant.link %}  {% url 'restaurant' restaurant.link %}   {% endif %}"
-                                       class="Commander-meill">Commander</a>
+                                       class="Commander-meill">See more!</a>
                                 </div>
                             {% endfor %}
                         </div>
                     </div>
                     <div class="div-bouton-meill wow fadeInUp" data-wow-delay="1.5s">
-                        <a href="{% url 'restaurants' %}" class="bouton-meill">Voir tous les restaurents</a></div>
+                        <a href="{% url 'restaurants' %}" class="bouton-meill">View more restaurants</a></div>
                 </div>
                 <!--Start Services-->
                 <div class="col-md-12">
@@ -39,10 +39,9 @@
                                     <div class="service-icon center-block">
                                         <img src="{% static 'allofood/images/' %}commander.png">
                                     </div>
-                                    <h3 class="text-center">Commande</h3>
-                                    <p align="center" class="text-center"> Choisissez votre restaurant,<br> Choisissez
-                                        vos d&eacute;licieux
-                                        repas pr&eacute;f&eacute;r&eacute;s.</p>
+                                    <h3 class="text-center">Choose</h3>
+                                    <p align="center" class="text-center"> Choose your favourite dishers from a restaurant,<br> Choose from the variety of options we have.
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-md-4 wow fadeInLeft" data-wow-delay="2.7s">
@@ -51,7 +50,8 @@
                                         <img src="{% static 'allofood/images/' %}confirmation.png">
                                     </div>
                                     <h3 class="text-center">Confirmation</h3>
-                                    <p class="text-center">Remplissez le formulaire, <br> Confirmer votre commande.</p>
+                                    <p class="text-center">Confirm your order. <br> and wait while we prepare fresh food. ;)
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-md-4 wow fadeInLeft" data-wow-delay="2.5s">
@@ -59,10 +59,10 @@
                                     <div class="service-icon center-block">
                                         <img src="{% static 'allofood/images/' %}coursier.png">
                                     </div>
-                                    <h3 class="text-center">Livraison</h3>
-                                    <p class="text-center">Patientez le temps que l&#146;un de nos coursiers sonne
-                                        &agrave;
-                                        votre porte, et payez lorsque vous aurez votre repas.</p>
+                                    <h3 class="text-center">Get it delivered!</h3>
+                                    <p class="text-center">Get your food delivered and <br> 
+                                        enjoy your meal with friends and family.
+                                    </p>
                                 </div>
                             </div>
                         </div>

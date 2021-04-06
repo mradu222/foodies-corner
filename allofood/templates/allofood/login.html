@@ -3,7 +3,7 @@
 <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
 
-    <div class="titre-login">Se connecter</div>
+    <div class="titre-login">Login</div>
     <div>
         {{ const.form|crispy }}
     </div>
@@ -12,9 +12,9 @@
             {% if 'user_not_found' in message.tags %}
                 <p style="color:red;font-size: 17px" align="center">email/password are incorrect</p>
             {% elif 'email_not_confirmed' in message.tags %}
-                <p style="color:red;font-size: 17px" align="center">Confirmez votre email SVP</p>
+                <p style="color:red;font-size: 17px" align="center">Please Confirm your email.</p>
             {% endif %}
         {% endfor %}
-        <input type="submit" name="login" value="Se Connecter" id='loginbutton'>
+        <input type="submit" name="login" value="Login." id='loginbutton'>
     </div>
 </form>
